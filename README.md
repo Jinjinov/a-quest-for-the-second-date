@@ -1,2 +1,2 @@
-# relationship-advisor
-A relationship advisor PWA in Vue.js
+# a-quest-for-the-second-date
+A quest for the second date
