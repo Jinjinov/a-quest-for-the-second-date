@@ -8,8 +8,8 @@ body {
 }
 
 #background {
-    width: 500px;
-    height: 500px;
+    width: 40%;
+    padding-bottom: 40%;
 
     position: fixed;
     left: 50%;
@@ -17,7 +17,7 @@ body {
     transform: translate(-50%, -50%);
     z-index: -1;
 
-    background: linear-gradient(to right, rgba(0,128,0,0.4), rgba(0,128,0,0));
+    background: linear-gradient(to right, rgba(204,221,155,0.4), rgba(204,221,155,0));
     border-radius: 50%;
 }
 
@@ -45,10 +45,10 @@ body {
 
 .category {
     font-size: 40px;
-    color: green;
+    color: rgba(204,221,155,1);
     height: 60px;
     line-height: 60px;
-    background: linear-gradient(to right, rgba(128,128,128,0), rgba(128,128,128,1));
+    background: linear-gradient(to right, rgba(128,128,128,0), rgba(128,128,128,0.15));
     border-radius: 0 9999em 9999em 0;
 }
 
@@ -65,7 +65,7 @@ body {
     vertical-align: middle;
     border-radius: 9999em 9999em 9999em 9999em;
     display: inline-block;
-    background: lightgreen;
+    background: rgba(204,221,155,1);
 }
 
 .completed {
@@ -74,7 +74,8 @@ body {
 }
 
 .task {
-    height: 46px;
+    padding: 2px;
+    margin: 5px;
 }
 
 /*
