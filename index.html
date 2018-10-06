@@ -22,10 +22,25 @@
       <div v-if="debug">
         <router-view></router-view>
       </div>
-      <div v-for="category in categories" v-on:click="category.isExpanded = !category.isExpanded">
-        {{ category.name }}
-        <div v-for="task in category.tasks" v-if="category.isExpanded">
-          {{ task }}
+      <div id="main">
+        <div id="background"></div>
+        <img src="images/center.png" alt="Center kakovosti odnosev" id="logo">
+        <div id="title">A quest: How to get a second date</div>
+        <div id="subtitle">
+          Uvodni tekst. Uvodni tekst.<br>
+          Uvodni tekst. Uvodni tekst.<br>
+          Uvodni tekst. Uvodni tekst.<br>
+          Uvodni tekst. Uvodni tekst.
+        </div>
+        <div v-for="category in categories" v-on:click="category.isExpanded = !category.isExpanded">
+          <div class="category">
+            {{ category.name }}
+          </div>
+          <div class="categories" v-if="category.isExpanded">
+            <div v-for="task in category.tasks">
+              <span class="check"><img src="images/smile.png" alt="Smile" class="completed"></span>{{ task }}
+            </div>
+          </div>
         </div>
       </div>
     </div>
