@@ -60,6 +60,9 @@ body {
 .check {
     width: 40px;
     height: 20px;
+    padding: 2px;
+    margin: 5px;
+    vertical-align: middle;
     border-radius: 9999em 9999em 9999em 9999em;
     display: inline-block;
     background: lightgreen;
@@ -70,10 +73,11 @@ body {
     height: 20px;
 }
 
+.task {
+    height: 46px;
+}
 
-
-
-
+/*
 select:required:invalid {
     color: gray;
 }
@@ -131,3 +135,4 @@ p {
     border-style: solid;
     border-width: 1px;
 }
+*/

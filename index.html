@@ -37,7 +37,7 @@
             {{ category.name }}
           </div>
           <div class="categories" v-if="category.isExpanded">
-            <div v-for="task in category.tasks">
+            <div v-for="task in category.tasks" class="task">
               <span class="check"><img src="images/smile.png" alt="Smile" class="completed"></span>{{ task }}
             </div>
           </div>
