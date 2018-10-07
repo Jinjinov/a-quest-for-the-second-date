@@ -2,6 +2,10 @@ body {
     font-family:'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 }
 
+::selection {
+    background: none;
+}
+
 #main {
     max-width: 1000px;
     margin: 0 auto;
@@ -30,7 +34,8 @@ body {
 }
 
 #title {
-    font-size: 90px;
+    font-size: 78px;
+    font-family: 'Libre Baskerville', serif;
     color: gray;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -38,18 +43,27 @@ body {
 
 #subtitle {
     font-size: 30px;
+    font-family: 'Libre Baskerville', serif;
     text-align: right;
     padding-top: 15px;
     padding-bottom: 15px;
 }
 
 .category {
+    margin-top: 20px;
+    margin-bottom: 20px;
     font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
     color: rgba(204,221,155,1);
     height: 60px;
     line-height: 60px;
     background: linear-gradient(to right, rgba(128,128,128,0), rgba(128,128,128,0.15));
     border-radius: 0 9999em 9999em 0;
+}
+
+.selected {
+    font-weight: 900;
 }
 
 .categories {
@@ -65,12 +79,23 @@ body {
     vertical-align: middle;
     border-radius: 9999em 9999em 9999em 9999em;
     display: inline-block;
-    background: rgba(204,221,155,1);
+    background: rgba(204,221,155,0.5);
 }
 
 .completed {
     width: 20px;
     height: 20px;
+    float: left;
+    vertical-align: middle;
+}
+
+.not-completed {
+    width: 20px;
+    height: 20px;
+    float: left;
+    vertical-align: middle;
+    border-radius: 50%;
+    background: rgba(204,221,155,1);
 }
 
 .task {
@@ -78,6 +103,31 @@ body {
     margin: 5px;
 }
 
+.index {
+    display: block;
+    margin: 2px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    text-align: right;
+}
+
+.tasktext {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+/*
+div {
+    border-style: solid;
+    border-width: 1px;
+}
+span {
+    border-style: solid;
+    border-width: 1px;
+}
+img {
+    border-style: solid;
+    border-width: 1px;
+}
 /*
 select:required:invalid {
     color: gray;
@@ -113,18 +163,6 @@ ul {
     border-width: 1px;
 }
 li {
-    margin: 2px;
-    padding: 2px;
-    border-style: solid;
-    border-width: 1px;
-}
-div {
-    margin: 2px;
-    padding: 2px;
-    border-style: solid;
-    border-width: 1px;
-}
-span {
     margin: 2px;
     padding: 2px;
     border-style: solid;
