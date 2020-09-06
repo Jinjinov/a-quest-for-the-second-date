@@ -27,41 +27,124 @@ new Vue({
       debug: false,
       path: window.location.pathname,
       categories: [
-        { name: "Komunikativnost", isExpanded: true, tasks: [
-          { isComplete: false, text: "vsaj 10 osebam reci Dober dan v naslednjem tednu." },
-          { isComplete: false, text: "vsaj desetim osebam v naslednjem tednu ponudi pomoč." },
-          { isComplete: false, text: "vsaj trem ljudem, ki jih še nikoli prej nisi videl, zaželi lep dan in se jim nasmehni." },
-          { isComplete: false, text: "pojdi v tri ralične trgovine, v katerih še nisi bil in prosi za pomoč pri nakupu." },
-          { isComplete: false, text: "pokliči dva človeka v naslednjem tednu in reci, da bi se rad pogovarjal. Potem jim predlagaj temo pogovora." },
-          { isComplete: false, text: "nekoga, ki ga dobro poznaš, vprašaj za mnenje o stvari, ki je zate zelo pomembna" }
-         ] },
-        { name: "Samozavest", isExpanded: false, tasks: [
-          { isComplete: false, text: "vsaj 5 minut na dan v zavetju svojega doma hodi z glavo pokonci, predstavljaj si, da na glavi nosiš vrč vode, ki ne sme pasti na tla." },
-          { isComplete: false, text: "Vsaj desetim osebam v enem tednu poglej v oči, pa čeprav samo za sekundo." },
-          { isComplete: false, text: "Vsaj trem ljudem se nasmehni in jih poglej v oči, takim, ki jih poznaš vsaj na videz." },
-          { isComplete: false, text: "naredi seznam vseh skrivnosti, ki jih drugi ne smejo vedeti o tebi." },
-          { isComplete: false, text: "naredi seznam vseh katastrof, ki bi se lahko zgodile, če bi ljudje vedeli te stvari o tebi." },
-          { isComplete: false, text: "izberi najmanjšo skrivnost in jo povej osebi, ki je ne poznaš." },
-          { isComplete: false, text: "Vsaj 5 minut hodi z visoko dvignjeno glavo med ljudmi." },
-          { isComplete: false, text: "Vsaj 10 ljudem v enem tednu reci dober dan in jih pri tem glej v oči." },
-          { isComplete: false, text: "Najdi nekoga, ki ga poznaš in mu povej svojo najlažjo skrivnost." }
-         ] },
-        { name: "Družabnost", isExpanded: false, tasks: [
-          { isComplete: false, text: "naredi seznam 10 aktivnosti, ki bi jih rad izkusil." },
-          { isComplete: false, text: "izberi eno aktivnost in pokliči prijatelja, da gre s teboj." },
-          { isComplete: false, text: "Izberi še eno aktivnost in povabi 2 prijatelja." },
-          { isComplete: false, text: "najdi aktivnost, kjer sicer ni tvojih prijateljev, a so drugi, novi ljudje." },
-          { isComplete: false, text: "Pri kosilu se usedi k družbi, ki jo poznaš le na videz." },
-          { isComplete: false, text: "vsaj 3 ljudi povabi na prijateljsko srečanje, lahko vsakega posebej." }
-         ] },
-        { name: "Urejenost", isExpanded: false, tasks: [
-          { isComplete: false, text: "naredi seznam sprememb, ki jih želiš videti pri sebi." },
-          { isComplete: false, text: "Označi stvari, ki si se jim pripravljen odpovedati za to, da dosežeš bolj urejen videz." },
-          { isComplete: false, text: "Izberi prvo spremembo, na kateri boš začel svoj quest." },
-          { isComplete: false, text: "Recimo, da izbere več mišic: Vsaj 5x na teden 5 minut delaj 5 različnih vaj za..." },
-          { isComplete: false, text: "Povečaj na 5x na teden po 10 minut" },
-          { isComplete: false, text: "Poišči frizerja, ki bo našel pravo frizuro za tvoj izgled." }
-         ] },
+        { 
+          isExpanded: true, 
+          name: "1.0 Kaj želim doseči?", 
+          description: "Vpišite cilj, ki ga želite doseči. Podrobnosti na tem mestu še niso pomembne. Namig: Ste vedeli da želeti nekaj doseči, morati nekaj doseči in hoteti nekaj doseči, ni enako? Za pomoč vam dajemo nekaj primerov:",
+          tasks: [
+            { isComplete: false, text: "Napisati diplomo." },
+            { isComplete: false, text: "Vedno za seboj pomiti posodo." },
+            { isComplete: false, text: "Pospravljati svojo sobo." },
+            { isComplete: false, text: "Osvojiti dekle/fanta." },
+            { isComplete: false, text: "Učiti se za izpit." },
+          ],
+          hint: ""
+        },
+        { 
+          isExpanded: false, 
+          name: "1.1", 
+          description: "Za cilj, ki ste ga navedli, vpišite vse mogoče dejavnike, ki morajo biti izpolnjeni, ki vam v tem trenutku pridejo na misel. Imate možnost vpisati do 30 takih dejavnikov. Spodaj vam dajemo primer, da si boste lažje predstavljali, kako, na primeru diplome.",
+          tasks: [
+            { isComplete: false, text: "imeti moram mentorja" },
+            { isComplete: false, text: "Potrebujem 3 mesece časa po 3 ure na dan" },
+            { isComplete: false, text: "Potrebujem naslov diplome" },
+            { isComplete: false, text: "Potrebujem literaturo" },
+            { isComplete: false, text: "Potrebujem računalnik" },
+            { isComplete: false, text: "Potrebujem svoj prostor" },
+            { isComplete: false, text: "Narediti moram raziskavo" },
+          ],
+          hint: ""
+        },
+        { 
+          isExpanded: false, 
+          name: "1.2", 
+          description: "Vsakega od dejavnikov je potrebno opremiti z ustreznimi parametri. To pomeni, da navedemo čimveč etajlov, ki so potrbni, da se dejavnik izpolni. Še vedno natančnost ni potrebna, le glavni opis nalog. Ponovno vam dajemo primer:",
+          tasks: [
+            { isComplete: false, text: "Možnosti mentorjev so... (navedemo imena)" },
+            { isComplete: false, text: "časa od tega trenutka do skrajnega roka za oddajo diplome je cca 10 mesecev" },
+            { isComplete: false, text: "Možni naslovi diplome so... preveriti pri mentorju" },
+            { isComplete: false, text: "poiskati seznam literature za izbrani naslov" },
+            { isComplete: false, text: "imam" },
+            { isComplete: false, text: "moja soba, knjižnica" },
+            { isComplete: false, text: "poiskati spletne obrazce, se odločiti za ustrezen naslov raziskave, vprašati mentorja kako se naredi" },
+          ],
+          hint: ""
+        },
+        { 
+          isExpanded: false, 
+          name: "1.3", 
+          description: "Vsak parameter razčlenimo na več detajlov. Spodaj primer:",
+          tasks: [
+            { isComplete: false, text: "Moj prvi izbor je... Če me zavrne, je moja naslednja odločitev... Če me zavrne tudi ta, grem k..., Če odpadejo vsi, bom prosil za prostega profeosrja po njihovem izboru." },
+            { isComplete: false, text: "90 dni po 3 ure na dan je najbolje razporediti na četrtke, sobote in nedelje, narediti urnik, tudi glede na knjižnico" },
+            { isComplete: false, text: "Seznam naslovov, ki bodo preverjeni, ko bo izbran mentor." },
+            { isComplete: false, text: "poiskati seznam literature za izbrani naslov" },
+            { isComplete: false, text: "imam – zato lahko ta dejavnik izključim kot nepomemben v tem trenutku" },
+            { isComplete: false, text: "moja soba, knjižnica – preveriti delovni čas in razpoložljivost študijskega kotička v knjižnici" },
+            { isComplete: false, text: "poiskati spletne obrazce, se odločiti za ustrezen naslov raziskave, vprašati mentorja kako se naredi – počakati na mentorja, naslov raziskave itd." },
+          ],
+          hint: "Nekateri parametri o odvisni od drugih, beležimo joih toliko časa, dokler ne dobijo svojega mesta na izvedbenem načrtu."
+        },
+        { 
+          isExpanded: false, 
+          name: "1.4", 
+          description: "Sprejmem odločitve, ki se najbolj približajo izvedbi parametrov. Primer:",
+          tasks: [
+            { isComplete: false, text: "Dne (datum) bom vsakemu od izbranih profesorjev poslal mail. Počakal bom 7 dni na odgovor in v kolikor se ne bodo odzvali, osebno odšel k njim v kabinet." },
+            { isComplete: false, text: "Dne (datum) bom preveril urnik knjižnice in naredil točen urnik, ki bo veljal od dneva določitve naslova diplome." },
+            { isComplete: false, text: "Seznam naslovov, ki bodo preverjeni, ko bo izbran mentor." },
+            { isComplete: false, text: "poiskati seznam literature za izbrani naslov" },
+            { isComplete: false, text: "opravljeno" },
+            { isComplete: false, text: "opravljeno" },
+            { isComplete: false, text: "poiskati spletne obrazce, se odločiti za ustrezen naslov raziskave, vprašati mentorja kako se naredi – počakati na mentorja, naslov raziskave itd." },
+          ],
+          hint: ""
+        },
+        { 
+          isExpanded: false, 
+          name: "1.5", 
+          description: "Odločitvam določimo kraj izvedbe, v kolikor je to potrebno.",
+          tasks: [
+            { isComplete: false, text: "ni pomemben, imam prenosnik" },
+            { isComplete: false, text: "ni pomemben, ker lahko preverim na internetu" },
+            { isComplete: false, text: "Kabinet profesorja" },
+            { isComplete: false, text: "Knjižnica, kabinet profesorja, internet" },
+            { isComplete: false, text: "opravljeno" },
+            { isComplete: false, text: "opravljeno" },
+            { isComplete: false, text: "internet, kabinet profesorja" },
+          ],
+          hint: ""
+        },
+        { 
+          isExpanded: false, 
+          name: "1.6", 
+          description: "Odločitvam damo čas izvedbe, kar je ključnega pomena. Tako začnemo sestavljati urnik.",
+          tasks: [
+            { isComplete: false, text: "Dne (datum) bom vsakemu od izbranih profesorjev poslal mail. Počakal bom 7 dni na odgovor in v kolikor se ne bodo odzvali, osebno odšel k njim v kabinet. – tu datumi določeni, ura bo 9h zjutraj." },
+            { isComplete: false, text: "Dne (datum) bom preveril urnik knjižnice in naredil točen urnik, ki bo veljal od dneva določitve naslova diplome. – datum določen, ura bo 8:30 na poti na fakulteto." },
+            { isComplete: false, text: "Seznam naslovov, ki bodo preverjeni, ko bo izbran mentor. – dne (datum) si bom vzel čas od 8:30 – 10:00 in napisal čim daljši možen seznam naslovov, ki mi pridejo na misel." },
+            { isComplete: false, text: "poiskati seznam literature za izbrani naslov - dne (datum) si bom vzel čas od 8:30 – 11:00 in napisal čim daljši možen seznam spletnih naslovov, ki bodo ustrezali področjem, ki jih bom obravnaval" },
+            { isComplete: false, text: "opravljeno" },
+            { isComplete: false, text: "opravljeno" },
+            { isComplete: false, text: "poiskati spletne obrazce, se odločiti za ustrezen naslov raziskave, vprašati mentorja kako se naredi – počakati na mentorja, naslov raziskave itd. - dne (datum) si bom vzel čas od 8:30 – 10:00 in poiskal spletne strani, ki ponujajo možnost raziskave ter prebral vsaj tri članke o tem, kako se naredi raziskava." },
+          ],
+          hint: "Namig: na videz nepotrebna razčlenitev je ključnega pomena, da zmanjšamo grandioznost cilja..."
+        },
+        { 
+          isExpanded: false, 
+          name: "1.7", 
+          description: "Končni izgled cilja:",
+          tasks: [
+            { isComplete: false, text: "Do (datum) bom napisal 3 maile" },
+            { isComplete: false, text: "Do (datum) bom čakal na odgovore" },
+            { isComplete: false, text: "Do (Datum) bom opravil raziskavo glede literature" },
+            { isComplete: false, text: "Do (Datum) bom opravil raziskavo glede raziskave" },
+            { isComplete: false, text: "opravljeno" },
+            { isComplete: false, text: "opravljeno" },
+            { isComplete: false, text: "Do (Datum) bom napisal seznam" },
+          ],
+          hint: ""
+        },
       ]
     },
     //-------------------------------------------------------------------------

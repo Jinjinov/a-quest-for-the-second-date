@@ -9,7 +9,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="#448AFF">
     <meta name="apple-mobile-web-app-title" content="A quest: How to get a second date">
 
-    <title>A quest: How to get a second date</title>
+    <title>KAKO DOSEČI SVOJE CILJE</title>
 
     <link rel="manifest" href="manifest.json">
     <link rel="icon" href="favicon.ico" type="image/x-icon"/>
@@ -26,16 +26,20 @@
       <div id="main">
         <div id="background"></div>
         <img src="images/center.png" alt="Center kakovosti odnosev" id="logo">
-        <div id="title">A quest:<br>How to get a second date</div>
+        <div id="title">KAKO DOSEČI SVOJE CILJE</div>
         <div id="subtitle">
-          Uvodni tekst. Uvodni tekst.<br>
-          Uvodni tekst. Uvodni tekst.<br>
-          Uvodni tekst. Uvodni tekst.<br>
-          Uvodni tekst. Uvodni tekst.
+          Cilji so točke v našem življenju, kamor želimo priti.<br>
+          <br>
+          Ali tja pridemo, je odvisno od strategije, kako se jih lotimo in ne toliko od dejanskih sposobnosti, ki jih imamo...<br>
+          <br>
+          Če sledimo zadanim okvirjem, se naša svoboda ne zmanjša, ampak poveča...<br>
         </div>
         <div v-for="category in categories">
           <div class="category" v-bind:class="{ selected: category.isExpanded }" v-on:click="category.isExpanded = !category.isExpanded">{{ category.name }}</div>
           <div class="categories" v-if="category.isExpanded">
+
+            <div class="categories">{{ category.description }}</div>
+
             <div v-for="(task, index) in category.tasks" class="task">
               <span class="check" v-on:click="task.isComplete = !task.isComplete">
                 <img src="images/smile.png" alt="Smile" class="completed" v-if="task.isComplete">
@@ -43,6 +47,9 @@
                 <span class="index">{{ index+1 }}.</span>
               </span><span calss="tasktext">{{ task.text }}</span>
             </div>
+
+            <div class="categories">{{ category.hint }}</div>
+
           </div>
         </div>
       </div>
@@ -55,7 +62,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.0.1/vue-router.min.js"></script>
     <script src="vuepouch.js"></script>
     <script src="index.js"></script>
-	  <script>
+    <script>
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", function() {
           navigator.serviceWorker.register("worker.js").then(function(registration) {
